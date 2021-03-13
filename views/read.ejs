@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/read.css">
+</head>
+<body>
+
+    <div id="back">
+
+        <div id="panel">
+
+            <% Data.forEach(function(val){ %>
+
+                <div class="read">
+
+                    <h4><%= val.post %></h4>
+
+                    <div class="icons">
+                       <a href=<%= "/update/"+val._id %>><i class="ri-pencil-line"></i></a>
+                        <a href=<%= "/delete/"+val._id %>><i class="ri-delete-bin-line"></i></a>
+                    </div>
+
+                </div>
+
+            <% }) %>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
